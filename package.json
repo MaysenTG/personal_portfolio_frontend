@@ -1,6 +1,7 @@
 {
   "name": "graphql_frontend",
   "version": "0.1.0",
+  "homepage": "http://maysengreenwood.me",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.5.0",
