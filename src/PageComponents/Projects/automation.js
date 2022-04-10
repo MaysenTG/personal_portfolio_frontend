@@ -1,6 +1,5 @@
 import { React } from "react";
 import ProjectTemplate from "./project_template";
-import { CircularProgress } from "@mui/material";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
@@ -21,24 +20,13 @@ function MyAppProjects() {
   const { loading, error, data } = useQuery(GET_PROJECTS);
 
   if (error) return `Error ${error.message}`;
-
-  if (loading)
-    return (
-      <div className="loading-container">
-        <h1>Loading automation projects</h1>
-        <span className="loading-item">
-          <CircularProgress />
-        </span>
-      </div>
-    );
-
   return (
     <section id="projects">
-      <div className="projects__container">
-        <div className="row">
-          <h1 className="section__title">Automation projects</h1>
-          <ProjectTemplate data={data} />
-        </div>
+      <div className="row">
+        <h1 style={{ "margin-top": "2rem" }} className="section__title">
+          Automation projects
+        </h1>
+        <ProjectTemplate data={data} loading={loading}/>
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 import { React } from "react";
 import "../styling/index.css";
 
-import WorkExperience from '../PageComponents/cv/work';
-import EducationExperience from '../PageComponents/cv/education';
+import WorkExperience from './cv/work';
+import EducationExperience from './cv/education';
 
 
 function MaysenCV() {

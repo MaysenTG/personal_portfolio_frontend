@@ -1,12 +1,12 @@
 import { React } from "react";
 import ReactDOM from "react-dom";
 import "./styling/bootstrap.min.css";
-import IndexPage from "./PageComponents/IndexPage";
+import Homepage from "./PageComponents/Homepage";
 import Footer from "./PageComponents/Footer";
-import MyProjects from "./PageComponents/my-projects";
-import ContactMe from "./PageComponents/contact-me";
+import MyProjects from "./PageComponents/MyProjects";
+import ContactMe from "./PageComponents/ContactMe";
 import MaysenCV from "./PageComponents/cv";
-import PrivacyPolicy from "./PageComponents/privacy-policy";
+import PrivacyPolicy from "./PageComponents/PrivacyPolicy";
 
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient } from "apollo-client";
@@ -38,8 +38,6 @@ const client = new ApolloClient({
     mode: 'no-cors',
   },
 });
-
-const cors = require('cors');
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -94,7 +92,7 @@ ReactDOM.render(
     <ApolloProvider client={client}>
       <Switch>
         <Route exact path="/">
-          <IndexPage />
+          <Homepage />
         </Route>
         <Route path="/my-projects">
           <MyProjects />

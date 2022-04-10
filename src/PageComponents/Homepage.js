@@ -1,11 +1,7 @@
 import portrait from "../media/self-portrait.webp";
-
 import { React } from "react";
 import "../styling/bootstrap.min.css";
-
 import { Link } from "react-router-dom";
-import { CircularProgress } from "@mui/material";
-
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
@@ -24,10 +20,11 @@ const GET_HOMEPAGE = gql`
   }
 `;
 
-function IndexPage() {
+function Homepage() {
   const { loading, error, data } = useQuery(GET_HOMEPAGE);
 
   if (error) return `Error ${error.message}`;
+  
   if (loading)
     return (
       <main className="page landing-page">
@@ -41,14 +38,20 @@ function IndexPage() {
           ></div>
           <div className="container">
             <div className="about-me">
-              <div class="placeholder-item">
-                <span class="loader-text">Lorem ipsum</span>
-              </div>
-              <button className="btn" id="main-projects-btn" to="/my-projects">
-                <div class="placeholder-item">
-                  <span class="loader-text">Lorem ipsum</span>
+              <div
+                className="ph-item"
+                style={{ border: "none", width: "100%" }}
+              >
+                <div>
+                  <div className="ph-row">
+                    <div className="ph-col-12 big"></div>
+                    <div
+                      className="ph-col-4 big"
+                      style={{ margin: "10px auto" }}
+                    ></div>
+                  </div>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
         </section>
@@ -63,41 +66,48 @@ function IndexPage() {
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-star-outline"></i>
                   </div>
-                  <div className="card-body">
-                    <h3 className="card-title">
-                      <div class="placeholder-item">
-                        <span class="loader-text">Lorem ipsum</span>
+                  <div class="ph-item">
+                    <div class="ph-col-12">
+                      <div class="ph-row">
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
                       </div>
-                    </h3>
-                    <p className="card-text placeholder-item">
-                      <span class="loader-text">
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-                        ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                      </span>
-                    </p>
+                    </div>
+                    <div>
+                      <div class="ph-row">
+                        <div class="ph-col-2 empty"></div>
+                        <div class="ph-col-8"></div>
+                        <div class="ph-col-2 empty"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
               <div className="col-md-4">
                 <div className="card special-skill-item border-0">
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-lightbulb-outline"></i>
                   </div>
-                  <div className="card-body">
-                    <h3 className="card-title">
-                      <div class="placeholder-item">
-                        <span class="loader-text">Lorem ipsum</span>
+                  <div class="ph-item">
+                    <div class="ph-col-12">
+                      <div class="ph-row">
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
                       </div>
-                    </h3>
-                    <p className="card-text placeholder-item">
-                      <span class="loader-text">
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-                        ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                      </span>
-                    </p>
+                    </div>
+                    <div>
+                      <div class="ph-row">
+                        <div class="ph-col-2 empty"></div>
+                        <div class="ph-col-8"></div>
+                        <div class="ph-col-2 empty"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -107,19 +117,23 @@ function IndexPage() {
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-gear-outline"></i>
                   </div>
-                  <div className="card-body">
-                    <h3 className="card-title">
-                      <div class="placeholder-item">
-                        <span class="loader-text">Lorem ipsum</span>
+                  <div class="ph-item">
+                    <div class="ph-col-12">
+                      <div class="ph-row">
+                        <div class="ph-col-12 big"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
+                        <div class="ph-col-12"></div>
                       </div>
-                    </h3>
-                    <p className="card-text placeholder-item">
-                      <span class="loader-text">
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-                        ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                        Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-                      </span>
-                    </p>
+                    </div>
+                    <div>
+                      <div class="ph-row">
+                        <div class="ph-col-2 empty"></div>
+                        <div class="ph-col-8"></div>
+                        <div class="ph-col-2 empty"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -206,4 +220,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default Homepage;

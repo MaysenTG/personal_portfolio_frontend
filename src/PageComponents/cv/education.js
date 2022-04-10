@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
-import { CircularProgress } from "@mui/material";
 
 const GET_WORK_CV = gql`
   {
@@ -16,18 +15,40 @@ const GET_WORK_CV = gql`
 function EduExperience() {
   const { loading, error, data } = useQuery(GET_WORK_CV);
 
+  if (error) return `Error ${error.message}`;
+
+  const repeatTimes = 2;
   if (loading) {
     return (
-      <div className="loading-container">
-        <h1>Loading Education</h1>
-        <span className="loading-item">
-          <CircularProgress />
-        </span>
+      <div className="education group">
+        <div className="heading">
+          <h2 className="text-center">Education</h2>
+        </div>
+        {Array.apply(null, { length: repeatTimes }).map((e, i) => (
+          <div key={i}>
+            <div class="ph-item">
+              <div class="ph-col-12">
+                <div class="ph-row">
+                  <div class="ph-col-2 big"></div>
+                  <div class="ph-col-8 empty"></div>
+                  <div class="ph-col-2"></div>
+                  <div class="ph-col-2"></div>
+                </div>
+              </div>
+              <div class="ph-col-12">
+                <div class="ph-row">
+                  <div class="ph-col-12"></div>
+                  <div class="ph-col-12"></div>
+                  <div class="ph-col-2"></div>
+                  <div class="ph-col-10 empty"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
-
-  if (error) return `Error ${error.message}`;
 
   return (
     <div className="education group">

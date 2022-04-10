@@ -159,6 +159,7 @@
 }
 
 
+
 /* Animated loading sections */
 .placeholder-item {
   box-shadow: 0 2px 5px 0 rgba(54, 53, 53, 0.15);
@@ -238,6 +239,7 @@
 }
 
 /* Media queries for responsive project container content*/
+
 @media only screen and (max-width: 1100px) {
   .project-image {
     width: 22rem;
@@ -265,6 +267,19 @@
   .project__description {
     left: 30px;
   }
+  .placeholder-image-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .placeholder-image-section.ph-item {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 570px) {
+  #ph-item-project {
+    width: 40%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -285,3 +300,4 @@
     margin-bottom: 60px;
   }
 }
+

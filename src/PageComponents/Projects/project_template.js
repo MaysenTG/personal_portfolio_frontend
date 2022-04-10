@@ -1,4 +1,79 @@
 function ProjectTemplate(props) {
+  if (props.loading)
+    return (
+      <div
+        className="placeholder-image-section"
+        style={{ display: "flex", justifyContent: "space-evenly" }}
+      >
+        <div id="ph-item-project" class="ph-item">
+          <div class="ph-col-12">
+            <div class="ph-row">
+              <div class="ph-col-4 big"></div>
+              <div class="ph-col-8 empty"></div>
+              <div class="ph-col-12"></div>
+            </div>
+          </div>
+          <div>
+            <div class="ph-row">
+              <div class="ph-col-12"></div>
+              <div class="ph-col-12"></div>
+              <div class="ph-col-12"></div>
+              <div class="ph-col-4"></div>
+            </div>
+            <br />
+            <div class="row-1">
+              <div
+                className="col-1"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexDirection: "row",
+                }}
+              >
+                <div className="ph-avatar"></div>
+                <div>&nbsp;</div>
+                <div className="ph-avatar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="ph-item-project" class="ph-item">
+          <div class="ph-col-12">
+            <div class="ph-row">
+              <div class="ph-col-4 big"></div>
+              <div class="ph-col-8 empty"></div>
+              <div class="ph-col-12"></div>
+            </div>
+          </div>
+          <div>
+            <div class="ph-row">
+              <div class="ph-col-12"></div>
+              <div class="ph-col-12"></div>
+              <div class="ph-col-12"></div>
+              <div class="ph-col-4"></div>
+            </div>
+            <br />
+            <div class="row-1">
+              <div
+                className="col-1"
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexDirection: "row",
+                }}
+              >
+                <div className="ph-avatar"></div>
+                <div className="" style={{ visibility: "none !important" }}>
+                  &nbsp;
+                </div>
+                <div className="ph-avatar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+
   return (
     <ul className="project__list">
       {props.data.projects.map((project) => {
@@ -6,7 +81,10 @@ function ProjectTemplate(props) {
           <li key={project.title} className="project">
             <div className="project__wrapper">
               <img
-                src={"https://personal-portfolio-admin-api.herokuapp.com"+project.imageUrl}
+                src={
+                  "https://personal-portfolio-admin-api.herokuapp.com" +
+                  project.imageUrl
+                }
                 className="project__img"
                 alt="Car subscription project"
               />
