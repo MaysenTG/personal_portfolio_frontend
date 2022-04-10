@@ -1,7 +1,7 @@
 {
   "name": "graphql_frontend",
   "version": "0.1.0",
-  "homepage": "https://maysentg.github.io/personal_portfolio_frontend",
+  "homepage": "https://maysengreenwood.me",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.5.0",
