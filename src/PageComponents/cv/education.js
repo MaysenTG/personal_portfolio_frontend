@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 const GET_WORK_CV = gql`
   {
     experiences(experienceType: "Education") {
+      id
       position
       title
       tenure
@@ -56,20 +57,24 @@ function EduExperience() {
         <h2 className="text-center">Education</h2>
       </div>
 
-      {data.experiences.map((edu) => (
-        <div className="item" key={`${edu.id}-edu`}>
-          <div className="row">
-            <div className="col-md-6">
-              <h3>{edu.position}</h3>
-              <h4 className="organization">{edu.title}</h4>
+      {data.experiences
+        .sort(function (a, b) {
+          return b.id - a.id;
+        })
+        .map((edu) => (
+          <div className="item" key={`${edu.id}-edu`}>
+            <div className="row">
+              <div className="col-md-6">
+                <h3>{edu.position}</h3>
+                <h4 className="organization">{edu.title}</h4>
+              </div>
+              <div className="col-6">
+                <span className="period">{edu.tenure}</span>
+              </div>
+              <p className="text-muted">{edu.description}</p>
             </div>
-            <div className="col-6">
-              <span className="period">{edu.tenure}</span>
-            </div>
-            <p className="text-muted">{edu.description}</p>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
