@@ -10,8 +10,8 @@ const GET_PROJECTS = gql`
       description
       skills
       githubUrl
-      previewUrl
       projectType
+      imageUrl
     }
   }
 `;

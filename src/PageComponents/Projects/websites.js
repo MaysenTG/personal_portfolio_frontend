@@ -12,6 +12,7 @@ const GET_PROJECTS = gql`
       githubUrl
       previewUrl
       projectType
+      imageUrl
     }
   }
 `;
