@@ -34,7 +34,12 @@ const link = createHttpLink({
 const client = new ApolloClient({
   link: link,
   cache: new InMemoryCache(),
+  fetchOptions: {
+    mode: 'no-cors',
+  },
 });
+
+const cors = require('cors');
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
