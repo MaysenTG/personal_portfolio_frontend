@@ -158,6 +158,42 @@
   color: #fff;
 }
 
+
+/* Animated loading sections */
+.placeholder-item {
+  box-shadow: 0 2px 5px 0 rgba(54, 53, 53, 0.15);
+  border-radius: 4px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.placeholder-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(to right, transparent 0%, #E8E8E8 50%, transparent 100%);
+  animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.loader-text {
+  visibility: hidden;
+}
+
+@keyframes load {
+  from {
+      left: -150px;
+  }
+  to   {
+      left: 100%;
+  }
+}
+
 /* Privacy policy styling */
 [data-custom-class="body"],
 [data-custom-class="body"] * {

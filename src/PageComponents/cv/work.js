@@ -21,7 +21,7 @@ function WorkExperience() {
   if (loading) {
     return (
       <div className="loading-container">
-        <h1>Loading CV</h1>
+        <h1>Loading work experiences</h1>
         <span className="loading-item">
           <CircularProgress />
         </span>
