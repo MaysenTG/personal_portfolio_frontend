@@ -6,7 +6,7 @@ function ProjectTemplate(props) {
           <li key={project.title} className="project">
             <div className="project__wrapper">
               <img
-                src={"http://localhost:3000"+project.imageUrl}
+                src={"https://personal-portfolio-admin-api.herokuapp.com"+project.imageUrl}
                 className="project__img"
                 alt="Car subscription project"
               />
