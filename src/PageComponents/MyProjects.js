@@ -1,5 +1,5 @@
 import Tabs from "react-bootstrap/Tabs";
-import MyWebsites from "./Projects/websites";
+//import MyWebsites from "./Projects/websites";
 import MyAutomation from "./Projects/automation";
 import MyAppProjects from "./Projects/app-projects";
 
@@ -14,9 +14,6 @@ function MyProjects() {
     >
       <Tabs eventKey="apps" title="Apps">
         <MyAppProjects />
-      </Tabs>
-      <Tabs eventKey="websites" title="Websites">
-        <MyWebsites />
       </Tabs>
       <Tabs eventKey="automation" title="Automation">
         <MyAutomation />
