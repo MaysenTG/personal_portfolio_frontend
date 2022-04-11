@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 
@@ -16,10 +18,10 @@ const GET_WORK_CV = gql`
 
 function WorkExperience() {
   const { loading, error, data } = useQuery(GET_WORK_CV);
+  const repeatTimes = 2;
+  const [ numWork, setNumWork] = useState(3);
 
   if (error) return `Error ${error.message}`;
-  const repeatTimes = 2;
-
   if (loading) {
     return (
       <div className="work-experience group">
@@ -63,6 +65,7 @@ function WorkExperience() {
         .sort(function (a, b) {
           return b.id - a.id;
         })
+        .slice(0, numWork)
         .map((job) => (
           <div className="item" key={job.id}>
             <div className="row">
@@ -80,6 +83,7 @@ function WorkExperience() {
             </div>
           </div>
         ))}
+        {numWork > data.experiences.length ? <></> : <button style={{ textDecoration: "underline", width: "100%"}} className="btn link-primary" onClick={() => setNumWork(numWork+3)}>Show more</button>}
     </div>
   );
 }
