@@ -28,21 +28,21 @@ function EduExperience() {
         </div>
         {Array.apply(null, { length: repeatTimes }).map((e, i) => (
           <div key={i}>
-            <div class="ph-item">
-              <div class="ph-col-12">
-                <div class="ph-row">
-                  <div class="ph-col-2 big"></div>
-                  <div class="ph-col-8 empty"></div>
-                  <div class="ph-col-2"></div>
-                  <div class="ph-col-2"></div>
+            <div className="ph-item">
+              <div className="ph-col-12">
+                <div className="ph-row">
+                  <div className="ph-col-2 big"></div>
+                  <div className="ph-col-8 empty"></div>
+                  <div className="ph-col-2"></div>
+                  <div className="ph-col-2"></div>
                 </div>
               </div>
-              <div class="ph-col-12">
-                <div class="ph-row">
-                  <div class="ph-col-12"></div>
-                  <div class="ph-col-12"></div>
-                  <div class="ph-col-2"></div>
-                  <div class="ph-col-10 empty"></div>
+              <div className="ph-col-12">
+                <div className="ph-row">
+                  <div className="ph-col-12"></div>
+                  <div className="ph-col-12"></div>
+                  <div className="ph-col-2"></div>
+                  <div className="ph-col-10 empty"></div>
                 </div>
               </div>
             </div>

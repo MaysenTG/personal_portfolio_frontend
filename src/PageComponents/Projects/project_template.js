@@ -5,23 +5,23 @@ function ProjectTemplate(props) {
         className="placeholder-image-section"
         style={{ display: "flex", justifyContent: "space-evenly" }}
       >
-        <div id="ph-item-project" class="ph-item">
-          <div class="ph-col-12">
-            <div class="ph-row">
-              <div class="ph-col-4 big"></div>
-              <div class="ph-col-8 empty"></div>
-              <div class="ph-col-12"></div>
+        <div id="ph-item-project" className="ph-item">
+          <div className="ph-col-12">
+            <div className="ph-row">
+              <div className="ph-col-4 big"></div>
+              <div className="ph-col-8 empty"></div>
+              <div className="ph-col-12"></div>
             </div>
           </div>
           <div>
-            <div class="ph-row">
-              <div class="ph-col-12"></div>
-              <div class="ph-col-12"></div>
-              <div class="ph-col-12"></div>
-              <div class="ph-col-4"></div>
+            <div className="ph-row">
+              <div className="ph-col-12"></div>
+              <div className="ph-col-12"></div>
+              <div className="ph-col-12"></div>
+              <div className="ph-col-4"></div>
             </div>
             <br />
-            <div class="row-1">
+            <div className="row-1">
               <div
                 className="col-1"
                 style={{
@@ -37,23 +37,23 @@ function ProjectTemplate(props) {
             </div>
           </div>
         </div>
-        <div id="ph-item-project" class="ph-item">
-          <div class="ph-col-12">
-            <div class="ph-row">
-              <div class="ph-col-4 big"></div>
-              <div class="ph-col-8 empty"></div>
-              <div class="ph-col-12"></div>
+        <div id="ph-item-project" className="ph-item">
+          <div className="ph-col-12">
+            <div className="ph-row">
+              <div className="ph-col-4 big"></div>
+              <div className="ph-col-8 empty"></div>
+              <div className="ph-col-12"></div>
             </div>
           </div>
           <div>
-            <div class="ph-row">
-              <div class="ph-col-12"></div>
-              <div class="ph-col-12"></div>
-              <div class="ph-col-12"></div>
-              <div class="ph-col-4"></div>
+            <div className="ph-row">
+              <div className="ph-col-12"></div>
+              <div className="ph-col-12"></div>
+              <div className="ph-col-12"></div>
+              <div className="ph-col-4"></div>
             </div>
             <br />
-            <div class="row-1">
+            <div className="row-1">
               <div
                 className="col-1"
                 style={{

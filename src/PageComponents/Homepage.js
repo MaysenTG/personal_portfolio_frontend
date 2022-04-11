@@ -29,7 +29,7 @@ function Homepage() {
     return (
       <main className="page landing-page">
         <section
-          style={{ "margin-top": "-2rem" }}
+          style={{ marginTop: "-2rem" }}
           className="portfolio-block block-intro"
         >
           <div
@@ -57,7 +57,7 @@ function Homepage() {
         </section>
         <section className="portfolio-block skills">
           <div className="container">
-            <div style={{ "margin-top": "-3rem" }} className="heading">
+            <div style={{ marginTop: "-3rem" }} className="heading">
               <h2>Skills</h2>
             </div>
             <div className="row">
@@ -66,21 +66,21 @@ function Homepage() {
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-star-outline"></i>
                   </div>
-                  <div class="ph-item">
-                    <div class="ph-col-12">
-                      <div class="ph-row">
-                        <div class="ph-col-12 big"></div>
-                        <div class="ph-col-8 empty"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
+                  <div className="ph-item">
+                    <div className="ph-col-12">
+                      <div className="ph-row">
+                        <div className="ph-col-12 big"></div>
+                        <div className="ph-col-8 empty"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
                       </div>
                     </div>
                     <div>
-                      <div class="ph-row">
-                        <div class="ph-col-2 empty"></div>
-                        <div class="ph-col-8"></div>
-                        <div class="ph-col-2 empty"></div>
+                      <div className="ph-row">
+                        <div className="ph-col-2 empty"></div>
+                        <div className="ph-col-8"></div>
+                        <div className="ph-col-2 empty"></div>
                       </div>
                     </div>
                   </div>
@@ -91,21 +91,21 @@ function Homepage() {
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-lightbulb-outline"></i>
                   </div>
-                  <div class="ph-item">
-                    <div class="ph-col-12">
-                      <div class="ph-row">
-                        <div class="ph-col-12 big"></div>
-                        <div class="ph-col-8 empty"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
+                  <div className="ph-item">
+                    <div className="ph-col-12">
+                      <div className="ph-row">
+                        <div className="ph-col-12 big"></div>
+                        <div className="ph-col-8 empty"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
                       </div>
                     </div>
                     <div>
-                      <div class="ph-row">
-                        <div class="ph-col-2 empty"></div>
-                        <div class="ph-col-8"></div>
-                        <div class="ph-col-2 empty"></div>
+                      <div className="ph-row">
+                        <div className="ph-col-2 empty"></div>
+                        <div className="ph-col-8"></div>
+                        <div className="ph-col-2 empty"></div>
                       </div>
                     </div>
                   </div>
@@ -117,21 +117,21 @@ function Homepage() {
                   <div className="card-header bg-transparent border-0">
                     <i className="icon ion-ios-gear-outline"></i>
                   </div>
-                  <div class="ph-item">
-                    <div class="ph-col-12">
-                      <div class="ph-row">
-                        <div class="ph-col-12 big"></div>
-                        <div class="ph-col-8 empty"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
-                        <div class="ph-col-12"></div>
+                  <div className="ph-item">
+                    <div className="ph-col-12">
+                      <div className="ph-row">
+                        <div className="ph-col-12 big"></div>
+                        <div className="ph-col-8 empty"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
+                        <div className="ph-col-12"></div>
                       </div>
                     </div>
                     <div>
-                      <div class="ph-row">
-                        <div class="ph-col-2 empty"></div>
-                        <div class="ph-col-8"></div>
-                        <div class="ph-col-2 empty"></div>
+                      <div className="ph-row">
+                        <div className="ph-col-2 empty"></div>
+                        <div className="ph-col-8"></div>
+                        <div className="ph-col-2 empty"></div>
                       </div>
                     </div>
                   </div>
@@ -145,7 +145,7 @@ function Homepage() {
   return (
     <main className="page landing-page">
       <section
-        style={{ "margin-top": "-2rem" }}
+        style={{ marginTop: "-2rem" }}
         className="portfolio-block block-intro"
       >
         <div
@@ -168,7 +168,7 @@ function Homepage() {
 
       <section className="portfolio-block skills">
         <div className="container">
-          <div style={{ "margin-top": "-3rem" }} className="heading">
+          <div style={{ marginTop: "-3rem" }} className="heading">
             <h2>Skills</h2>
           </div>
           <div className="row">

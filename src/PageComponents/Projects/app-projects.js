@@ -24,7 +24,7 @@ function MyAppProjects() {
   return (
     <section id="projects">
       <div className="row">
-        <h1 style={{"margin-top": "2rem"}} className="section__title">Web Apps</h1>
+        <h1 style={{ marginTop: "2rem"}} className="section__title">Web Apps</h1>
         <ProjectTemplate data={data} loading={loading} />
       </div>
     </section>
