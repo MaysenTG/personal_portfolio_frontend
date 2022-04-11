@@ -156,8 +156,7 @@ function Homepage() {
           <div className="about-me">
             <p>{data.homepages[0].subtext}</p>
             <Link
-              className="btn btn-outline-primary"
-              id="main-projects-btn"
+              className="btn btn-primary"
               to="/my-projects"
             >
               {data.homepages[0].buttonLabel}

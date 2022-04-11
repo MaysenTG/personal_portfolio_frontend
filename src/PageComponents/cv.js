@@ -3,6 +3,7 @@ import "../styling/index.css";
 
 import WorkExperience from './cv/work';
 import EducationExperience from './cv/education';
+import CVContent from "./cv/SkillsHobbies";
 
 
 function MaysenCV() {
@@ -13,6 +14,7 @@ function MaysenCV() {
           <WorkExperience />
           <EducationExperience />
         </div>
+        <CVContent />
       </section>
     </main>
   );

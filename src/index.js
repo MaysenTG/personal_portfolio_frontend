@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
 
 // GraphQL logic
 const link = createHttpLink({
-  uri: "https://personal-portfolio-admin-api.herokuapp.com/graphql"
+  uri: "https://admin.maysengreenwood.me/graphql",
 });
 
 const client = new ApolloClient({
