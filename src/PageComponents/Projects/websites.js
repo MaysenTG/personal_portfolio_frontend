@@ -5,7 +5,7 @@ import gql from "graphql-tag";
 
 const GET_PROJECTS = gql`
   {
-    projects(projectType: "Website") {
+    projects(projectType: "Website", showProject: true) {
       title
       description
       skills
