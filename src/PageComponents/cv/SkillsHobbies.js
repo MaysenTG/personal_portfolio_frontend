@@ -12,12 +12,17 @@ const GET_CV_CONTENT = gql`
       skill3Weight
       hobbies
       showWeight
+      showHobbies
+      showSkills
+      showContact
     }
   }
 `;
 
 function CVContent() {
   const { loading, error, data } = useQuery(GET_CV_CONTENT);
+  var skillClass = "col-md-6";
+  var contactClass = "col-md-6";
 
   if (error) return `Error ${error.message}`;
   if (loading) {
@@ -75,13 +80,24 @@ function CVContent() {
     );
   }
 
+ if (data.cvpages[0].showContact && !data.cvpages[0].showSkills) {
+    skillClass = "d-none";
+    contactClass = "col-md-12";
+  } else if (!data.cvpages[0].showContact && data.cvpages[0].showSkills) {
+    skillClass = "col-md-12";
+    contactClass = "d-none";
+  } else {
+    skillClass = "d-none";
+    contactClass = "d-none";
+  }
+
   return (
     <main className="page cv-page">
       <section className="portfolio-block cv">
         <div className="container">
           <div className="group">
             <div className="row">
-              <div className="col-md-6">
+              <div className={skillClass}>
                 <div className="skills portfolio-info-card">
                   <h2>Skills</h2>
                   <h3>{data.cvpages[0].skill1Name}</h3>
@@ -93,7 +109,7 @@ function CVContent() {
                           aria-valuenow={data.cvpages[0].skill1Weight}
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          style={{ width: (data.cvpages[0].skill1Weight + "%") }}
+                          style={{ width: data.cvpages[0].skill1Weight + "%" }}
                         >
                           <span className="visually-hidden">
                             {data.cvpages[0].skill1Weight}%
@@ -112,7 +128,7 @@ function CVContent() {
                           aria-valuenow={data.cvpages[0].skill2Weight}
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          style={{ width: (data.cvpages[0].skill2Weight + "%") }}
+                          style={{ width: data.cvpages[0].skill2Weight + "%" }}
                         >
                           <span className="visually-hidden">
                             {data.cvpages[0].skill2Weight}%
@@ -120,7 +136,9 @@ function CVContent() {
                         </div>
                       </div>
                     </>
-                  ) : <></>}
+                  ) : (
+                    <></>
+                  )}
                   <h3>{data.cvpages[0].skill3Name}</h3>
                   {data.cvpages[0].showWeight ? (
                     <>
@@ -130,7 +148,7 @@ function CVContent() {
                           aria-valuenow={data.cvpages[0].skill3Weight}
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          style={{ width: (data.cvpages[0].skill3Weight + "%") }}
+                          style={{ width: data.cvpages[0].skill3Weight + "%" }}
                         >
                           <span className="visually-hidden">
                             {data.cvpages[0].skill3Weight}%
@@ -141,7 +159,7 @@ function CVContent() {
                   ) : null}
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className={contactClass}>
                 <div className="contact-info portfolio-info-card">
                   <h2>Contact Info</h2>
                   <div className="row">
@@ -180,7 +198,9 @@ function CVContent() {
               </div>
             </div>
           </div>
-          <div className="hobbies group">
+          <div
+            className={!data.cvpages[0].showHobbies ? "d-none" : "hobbies group"}
+          >
             <div className="heading">
               <h2 className="text-center">Hobbies</h2>
             </div>
