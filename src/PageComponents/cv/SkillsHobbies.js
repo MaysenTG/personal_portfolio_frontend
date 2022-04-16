@@ -80,7 +80,10 @@ function CVContent() {
     );
   }
 
- if (data.cvpages[0].showContact && !data.cvpages[0].showSkills) {
+  if (data.cvpages[0].showContact && data.cvpages[0].showSkills) {
+    skillClass = "col-md-6";
+    contactClass = "col-md-6";
+  } else if (data.cvpages[0].showContact && !data.cvpages[0].showSkills) {
     skillClass = "d-none";
     contactClass = "col-md-12";
   } else if (!data.cvpages[0].showContact && data.cvpages[0].showSkills) {
