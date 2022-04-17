@@ -1,15 +1,6 @@
 /* Personal Website Styles */
-
-.fa-github {
-  content: url("../media/github-logo.svg.png");
-}
-
 .fa-github-white {
   content: url("../media/github-logo-white.png");
-}
-
-.fa-web {
-  content: url("../media/website_logo.png");
 }
 
 .fa-web-white {
@@ -18,23 +9,6 @@
 
 .icon {
   height: 2rem;
-}
-
-.loading-container {
-  width: 100%;
-  margin: 5rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-
-.loading-item {
-  margin: 0 auto;
-}
-
-.loading-container h1 {
-  text-align: center;
 }
 
 .nav-link:active {
@@ -169,31 +143,6 @@
   overflow: hidden;
 }
 
-
-.placeholder-item::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: -150px;
-  top: 0;
-  height: 100%;
-  width: 150px;
-  background: linear-gradient(to right, transparent 0%, #E8E8E8 50%, transparent 100%);
-  animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-}
-
-.loader-text {
-  visibility: hidden;
-}
-
-@keyframes load {
-  from {
-      left: -150px;
-  }
-  to   {
-      left: 100%;
-  }
-}
 
 /* Privacy policy styling */
 [data-custom-className="body"],

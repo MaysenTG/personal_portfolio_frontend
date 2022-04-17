@@ -15,7 +15,6 @@
     "bootstrap": "^5.0.2",
     "cors": "^2.8.5",
     "emailjs-com": "^3.2.0",
-    "firebase": "^9.2.0",
     "graphql": "^16.3.0",
     "html-react-parser": "^1.4.5",
     "placeholder-loading": "^0.5.0",

@@ -35,7 +35,7 @@ const client = new ApolloClient({
   link: link,
   cache: new InMemoryCache(),
   fetchOptions: {
-    mode: 'no-cors',
+    mode: "no-cors",
   },
 });
 
@@ -109,8 +109,7 @@ ReactDOM.render(
         <Route
           path="/admin"
           component={() => {
-            window.location.href =
-              "https://maysentg.github.io/personal-portfolio-admin/";
+            window.location.href = "https://admin.maysengreenwood.me";
             return null;
           }}
         />
