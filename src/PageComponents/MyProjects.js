@@ -1,5 +1,4 @@
 import Tabs from "react-bootstrap/Tabs";
-//import MyWebsites from "./Projects/websites";
 import MyAutomation from "./Projects/automation";
 import MyAppProjects from "./Projects/app-projects";
 

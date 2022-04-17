@@ -1,5 +1,5 @@
 import { React } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./styling/bootstrap.min.css";
 import Homepage from "./PageComponents/Homepage";
 import Footer from "./PageComponents/Footer";
@@ -7,6 +7,8 @@ import MyProjects from "./PageComponents/MyProjects";
 import ContactMe from "./PageComponents/ContactMe";
 import MaysenCV from "./PageComponents/cv";
 import PrivacyPolicy from "./PageComponents/PrivacyPolicy";
+
+
 
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient } from "apollo-client";
@@ -16,10 +18,10 @@ import { createHttpLink } from "apollo-link-http";
 import styled from "styled-components";
 import {
   BrowserRouter as Router,
-  Switch,
-  Link,
   Route,
-  Redirect,
+  Link,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
 const StyledLink = styled(Link)`
@@ -39,8 +41,9 @@ const client = new ApolloClient({
   },
 });
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
   <Router>
     <nav
       className="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient"
@@ -90,36 +93,25 @@ ReactDOM.render(
     </nav>
 
     <ApolloProvider client={client}>
-      <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route path="/my-projects">
-          <MyProjects />
-        </Route>
-        <Route path="/contact">
-          <ContactMe />
-        </Route>
-        <Route path="/cv">
-          <MaysenCV />
-        </Route>
-        <Route path="/privacy-policy">
-          <PrivacyPolicy />
-        </Route>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route path="/my-projects" element={<MyProjects />} />
+        <Route path="/contact" element={<ContactMe />} />
+        <Route path="/cv" element={<MaysenCV />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
         <Route
           path="/admin"
-          component={() => {
+          element={() => {
             window.location.href = "https://admin.maysengreenwood.me";
             return null;
           }}
         />
-        <Route path="*">
-          <Redirect from="*" to="/" />
-        </Route>
-      </Switch>
+        <Route path="*" component={<Navigate from="*" to="/" />} />
+      </Routes>
     </ApolloProvider>
 
     <Footer />
-  </Router>,
-  rootElement
+  </Router>
 );
