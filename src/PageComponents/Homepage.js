@@ -44,7 +44,7 @@ function Homepage() {
               >
                 <div>
                   <div className="ph-row">
-                    <div className="ph-col-12 big"></div>
+                    <div className="ph-col-10 big" style={{ margin: "0 auto" }}></div>
                     <div
                       className="ph-col-4 big"
                       style={{ margin: "10px auto" }}
