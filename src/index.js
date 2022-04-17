@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
 
 // GraphQL logic
 const link = createHttpLink({
-  uri: "https://admin.maysengreenwood.me/graphql",
+  uri: "https://admin.maysengreenwood.me/api/v1/graphql",
 });
 
 const client = new ApolloClient({
