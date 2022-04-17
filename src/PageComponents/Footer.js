@@ -45,7 +45,7 @@ function Footer() {
             <span style={{textDecoration: 'underline' }}>Other</span>
           </button>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="/admin" style={dropdownLinkStyle}>
+            <a className="dropdown-item" href="https://admin.maysengreenwood.me" style={dropdownLinkStyle}>
               Admin
             </a>
             <Link className="dropdown-item" to="/privacy-policy" style={dropdownLinkStyle}>

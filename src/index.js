@@ -101,14 +101,7 @@ root.render(
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-        <Route
-          path="/admin"
-          element={() => {
-            window.location.href = "https://admin.maysengreenwood.me";
-            return null;
-          }}
-        />
-        <Route path="*" component={<Navigate from="*" to="/" />} />
+        <Route path="*" element={<Navigate from="*" to="/" />} />
       </Routes>
     </ApolloProvider>
 
