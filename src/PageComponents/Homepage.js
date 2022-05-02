@@ -1,4 +1,8 @@
 import portrait from "../media/self-portrait.webp";
+import settingsIcon from "../media/settings-icon.webp";
+import starIcon from "../media/star-icon.webp";
+import lightIcon from "../media/light-icon.webp";
+
 import { React } from "react";
 import "../styling/bootstrap.min.css";
 import { Link } from "react-router-dom";
@@ -174,7 +178,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <i className="icon ion-ios-star-outline"></i>
+                  <img src={starIcon} alt="star icon" className="icon"/>
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -188,7 +192,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <i className="icon ion-ios-lightbulb-outline"></i>
+                  <img src={lightIcon} alt="light icon" className="icon"/>
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -202,7 +206,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <i className="icon ion-ios-gear-outline"></i>
+                  <img src={settingsIcon} alt="settings icon" className="icon"/>
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
