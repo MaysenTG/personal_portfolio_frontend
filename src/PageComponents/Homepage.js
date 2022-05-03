@@ -4,7 +4,6 @@ import starIcon from "../media/star-icon.webp";
 import lightIcon from "../media/light-icon.webp";
 
 import { React } from "react";
-import "../styling/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";

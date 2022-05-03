@@ -1,5 +1,4 @@
 import { React } from "react";
-import "../styling/index.css";
 
 import WorkExperience from './cv/work';
 import EducationExperience from './cv/education';

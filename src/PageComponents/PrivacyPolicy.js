@@ -1,5 +1,4 @@
 import React from "react";
-import "../styling/index.css";
 
 function PrivacyPolicy() {
   return (

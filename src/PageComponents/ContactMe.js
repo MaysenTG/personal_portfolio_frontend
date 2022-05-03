@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 // eslint-disable-next-line
 import FormModal from "./Modal";
-import "../styling/index.css";
 import { init } from "emailjs-com";
 
 //Initializing data for EmailJS

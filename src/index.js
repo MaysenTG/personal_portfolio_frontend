@@ -1,6 +1,5 @@
 import { React } from "react";
 import { createRoot } from "react-dom/client";
-import "./styling/bootstrap.min.css";
 import Homepage from "./PageComponents/Homepage";
 import Footer from "./PageComponents/Footer";
 import MyProjects from "./PageComponents/MyProjects";
