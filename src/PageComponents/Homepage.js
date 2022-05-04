@@ -13,6 +13,7 @@ const GET_HOMEPAGE = gql`
     homepages {
       subtext
       buttonLabel
+      buttoncolor
       skill1
       skill1Title
       skill2
@@ -161,6 +162,7 @@ function Homepage() {
             <Link
               className="btn btn-primary"
               to="/my-projects"
+              style={{ backgroundColor: data.homepages[0].buttoncolor }}
             >
               {data.homepages[0].buttonLabel}
             </Link>
