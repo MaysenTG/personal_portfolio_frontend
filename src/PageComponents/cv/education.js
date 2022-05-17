@@ -4,19 +4,19 @@ import gql from "graphql-tag";
 
 const GET_WORK_CV = gql`
   {
-    experiences(experienceType: "Education") {
+    educations(orderBy: id_DESC) {
       id
-      position
-      title
-      tenure
       description
+      location
+      position
+      tenure
     }
   }
 `;
 
 function EduExperience() {
   const { loading, error, data } = useQuery(GET_WORK_CV);
-  const [ numEdu, setNumEdu] = useState(2);
+  const [numEdu, setNumEdu] = useState(2);
   const repeatTimes = 2;
 
   if (error) return `Error ${error.message}`;
@@ -58,8 +58,9 @@ function EduExperience() {
         <h2 className="text-center">Education</h2>
       </div>
 
-      {data.experiences
+      {data.educations
         .sort(function (a, b) {
+          console.log("Order: " + a.id);
           return b.id - a.id;
         })
         .slice(0, numEdu)
@@ -68,7 +69,7 @@ function EduExperience() {
             <div className="row">
               <div className="col-md-6">
                 <h3>{edu.position}</h3>
-                <h4 className="organization">{edu.title}</h4>
+                <h4 className="organization">{edu.location}</h4>
               </div>
               <div className="col-6">
                 <span className="period">{edu.tenure}</span>
@@ -77,7 +78,17 @@ function EduExperience() {
             </div>
           </div>
         ))}
-        {numEdu > data.experiences.length ? <></> : <button style={{ textDecoration: "underline", width: "100%"}} className="btn link-primary" onClick={() => setNumEdu(numEdu+2)}>Show more</button>}
+      {numEdu > data.educations.length ? (
+        <></>
+      ) : (
+        <button
+          style={{ textDecoration: "underline", width: "100%" }}
+          className="btn link-primary"
+          onClick={() => setNumEdu(numEdu + 2)}
+        >
+          Show more
+        </button>
+      )}
     </div>
   );
 }

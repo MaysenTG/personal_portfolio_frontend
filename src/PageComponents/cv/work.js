@@ -5,13 +5,12 @@ import gql from "graphql-tag";
 
 const GET_WORK_CV = gql`
   {
-    experiences(experienceType: "Work") {
-      id
+    works(orderBy: id_DESC) {
+      description
+      location
       position
       title
-      location
       tenure
-      description
     }
   }
 `;
@@ -19,7 +18,7 @@ const GET_WORK_CV = gql`
 function WorkExperience() {
   const { loading, error, data } = useQuery(GET_WORK_CV);
   const repeatTimes = 2;
-  const [ numWork, setNumWork] = useState(3);
+  const [numWork, setNumWork] = useState(3);
 
   if (error) return `Error ${error.message}`;
   if (loading) {
@@ -61,7 +60,7 @@ function WorkExperience() {
         <h2 className="text-center">Work Experience</h2>
       </div>
 
-      {data.experiences
+      {data.works
         .sort(function (a, b) {
           return b.id - a.id;
         })
@@ -83,7 +82,17 @@ function WorkExperience() {
             </div>
           </div>
         ))}
-        {numWork > data.experiences.length ? <></> : <button style={{ textDecoration: "underline", width: "100%"}} className="btn link-primary" onClick={() => setNumWork(numWork+3)}>Show more</button>}
+      {numWork > data.works.length ? (
+        <></>
+      ) : (
+        <button
+          style={{ textDecoration: "underline", width: "100%" }}
+          className="btn link-primary"
+          onClick={() => setNumWork(numWork + 3)}
+        >
+          Show more
+        </button>
+      )}
     </div>
   );
 }

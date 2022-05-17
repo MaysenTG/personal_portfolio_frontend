@@ -29,7 +29,7 @@ const StyledLink = styled(Link)`
 
 // GraphQL logic
 const link = createHttpLink({
-  uri: "https://admin.maysengreenwood.me/api/v1/graphql",
+  uri: "https://api-ap-southeast-2.graphcms.com/v2/cl2wglc9d1y0s01yw6cx0fc4n/master",
 });
 
 const client = new ApolloClient({
@@ -39,6 +39,7 @@ const client = new ApolloClient({
     mode: "no-cors",
   },
 });
+
 
 const container = document.getElementById("root");
 const root = createRoot(container);

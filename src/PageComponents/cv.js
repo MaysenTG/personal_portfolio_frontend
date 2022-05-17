@@ -13,7 +13,6 @@ function MaysenCV() {
           <WorkExperience />
           <EducationExperience />
         </div>
-        <CVContent />
       </section>
     </main>
   );

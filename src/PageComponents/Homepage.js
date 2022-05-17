@@ -11,15 +11,14 @@ import gql from "graphql-tag";
 const GET_HOMEPAGE = gql`
   {
     homepages {
-      subtext
       buttonLabel
-      buttoncolor
-      skill1
+      subText
       skill1Title
-      skill2
       skill2Title
-      skill3
       skill3Title
+      skill1
+      skill2
+      skill3
     }
   }
 `;
@@ -28,7 +27,7 @@ function Homepage() {
   const { loading, error, data } = useQuery(GET_HOMEPAGE);
 
   if (error) return `Error ${error.message}`;
-  
+
   if (loading)
     return (
       <main className="page landing-page">
@@ -48,7 +47,10 @@ function Homepage() {
               >
                 <div>
                   <div className="ph-row">
-                    <div className="ph-col-10 big" style={{ margin: "0 auto" }}></div>
+                    <div
+                      className="ph-col-10 big"
+                      style={{ margin: "0 auto" }}
+                    ></div>
                     <div
                       className="ph-col-4 big"
                       style={{ margin: "10px auto" }}
@@ -59,6 +61,7 @@ function Homepage() {
             </div>
           </div>
         </section>
+
         <section className="portfolio-block skills">
           <div className="container">
             <div style={{ marginTop: "-3rem" }} className="heading">
@@ -158,7 +161,7 @@ function Homepage() {
         ></div>
         <div className="container">
           <div className="about-me">
-            <p>{data.homepages[0].subtext}</p>
+            <p>{data.homepages[0].subText}</p>
             <Link
               className="btn btn-primary"
               to="/my-projects"
@@ -179,7 +182,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <img src={starIcon} alt="star icon" className="icon"/>
+                  <img src={starIcon} alt="star icon" className="icon" />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -193,7 +196,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <img src={lightIcon} alt="light icon" className="icon"/>
+                  <img src={lightIcon} alt="light icon" className="icon" />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -207,7 +210,11 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <img src={settingsIcon} alt="settings icon" className="icon"/>
+                  <img
+                    src={settingsIcon}
+                    alt="settings icon"
+                    className="icon"
+                  />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">

@@ -84,9 +84,9 @@ function ProjectTemplate(props) {
           <li key={project.title} className="project">
             <div className="project__wrapper">
               <img
-                src={project.imageUrl}
+                src={project.projectImage.url}
                 className="project__img"
-                alt="Car subscription project"
+                alt={project.title}
               />
               <div className="project__description">
                 <h3 className="project__description--title">{project.title}</h3>

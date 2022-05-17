@@ -5,20 +5,15 @@ import gql from "graphql-tag";
 
 const GET_PROJECTS = gql`
   {
-    projects(projectType: "Website", showProject: true) {
+    projects(where: { projectType: "website" }) {
       title
-      description
-      skills
-      githubUrl
-      previewUrl
-      projectType
-      imageUrl
     }
   }
 `;
 
 function MyAppProjects() {
   const { loading, error, data } = useQuery(GET_PROJECTS);
+  console.log(data);
 
   if (error) return `Error ${error.message}`;
 
@@ -28,7 +23,7 @@ function MyAppProjects() {
         <h1 style={{ marginTop: "2rem" }} className="section__title">
           Websites
         </h1>
-        <ProjectTemplate data={data} loading={loading}/>
+        <ProjectTemplate data={data} loading={loading} />
       </div>
     </section>
   );
