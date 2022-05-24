@@ -1,4 +1,3 @@
-import portrait from "../media/self-portrait.webp";
 import settingsIcon from "../media/settings-icon.webp";
 import starIcon from "../media/star-icon.webp";
 import lightIcon from "../media/light-icon.webp";
@@ -37,7 +36,7 @@ function Homepage() {
         >
           <div
             className="avatar"
-            style={{ backgroundImage: `url(${portrait})` }}
+            style={{ backgroundImage: `` }}
           ></div>
           <div className="container">
             <div className="about-me">
@@ -157,7 +156,7 @@ function Homepage() {
       >
         <div
           className="avatar"
-          style={{ backgroundImage: `url(${portrait})` }}
+          style={{ backgroundImage: `url(https://ik.imagekit.io/maysentg/tr:w-200,h-200/self-portrait.jpg)` }}
         ></div>
         <div className="container">
           <div className="about-me">
