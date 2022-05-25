@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
+import FacebookIcon from "../media/facebook-footer.png";
 
 const dropdownLinkStyle = {
   maxWidth: "92%",
@@ -55,23 +56,23 @@ function Footer() {
         </div>
       </div>
 
-      <div className="social-icons">
+      <div className="mt-2">
         <a
           href="https://www.facebook.com/maysen.greenwood"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="icon ion-social-facebook"></i>
+          <i style={{ content: "url('https://ik.imagekit.io/maysentg/icons8-facebook-240.png')" }} className="icon"></i>
         </a>
         <a
           href="https://www.instagram.com/maysengreenwood/?hl=en"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="icon ion-social-instagram-outline"></i>
+          <i style={{ content: "url('https://ik.imagekit.io/maysentg/tr:f-png/icons8-instagram-240.png')" }} className="icon"></i>
         </a>
         <a href="https://github.com/MaysenTG" target="_blank" rel="noreferrer">
-          <i className="icon ion-social-github"></i>
+        <i style={{ content: "url('https://ik.imagekit.io/maysentg/tr:f-png/icons8-github-256.png')" }} className="icon"></i>
         </a>
       </div>
     </footer>
