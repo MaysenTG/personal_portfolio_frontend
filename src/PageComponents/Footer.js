@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import FacebookIcon from "../media/facebook-footer.png";
 
 const dropdownLinkStyle = {
   maxWidth: "92%",

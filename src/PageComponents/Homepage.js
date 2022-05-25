@@ -1,7 +1,3 @@
-import settingsIcon from "../media/settings-icon.webp";
-import starIcon from "../media/star-icon.webp";
-import lightIcon from "../media/light-icon.webp";
-
 import { React } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
@@ -181,7 +177,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <img src={starIcon} alt="star icon" className="icon" />
+                  <img src="https://ik.imagekit.io/maysentg/star-icon.webp" alt="star icon" className="icon" />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -195,7 +191,7 @@ function Homepage() {
             <div className="col-md-4">
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
-                  <img src={lightIcon} alt="light icon" className="icon" />
+                  <img src="https://ik.imagekit.io/maysentg/light-icon.webp" alt="light icon" className="icon" />
                 </div>
                 <div className="card-body">
                   <h3 className="card-title">
@@ -210,7 +206,7 @@ function Homepage() {
               <div className="card special-skill-item border-0">
                 <div className="card-header bg-transparent border-0">
                   <img
-                    src={settingsIcon}
+                    src="https://ik.imagekit.io/maysentg/settings-icon.webp"
                     alt="settings icon"
                     className="icon"
                   />

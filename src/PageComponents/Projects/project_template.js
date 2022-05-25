@@ -1,6 +1,3 @@
-import GithubWhite from '../../media/github-logo-white.png';
-import WebsiteLogo from '../../media/website-logo-white.png';
-
 function ProjectTemplate(props) {
   if (props.loading)
     return (
@@ -103,7 +100,7 @@ function ProjectTemplate(props) {
                     target="_blank"
                     className="project__description--link"
                   >
-                    <img alt="github icon" src={ GithubWhite } className="icon"/>
+                    <img alt="github icon" src="https://ik.imagekit.io/maysentg/tr:w-100,h-100/github-logo-white.png" className="icon"/>
                   </a>
 
                   <a
@@ -112,7 +109,7 @@ function ProjectTemplate(props) {
                     target="_blank"
                     className="project__description--link"
                   >
-                    <img alt="web preview icon" src={ WebsiteLogo } className="icon"/>
+                    <img alt="web preview icon" src="https://ik.imagekit.io/maysentg/tr:w-100,h-100/website-logo-white.png" className="icon"/>
                   </a>
                 </div>
               </div>
