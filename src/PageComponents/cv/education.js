@@ -60,7 +60,6 @@ function EduExperience() {
 
       {data.educations
         .sort(function (a, b) {
-          console.log("Order: " + a.id);
           return b.id - a.id;
         })
         .slice(0, numEdu)

@@ -13,7 +13,6 @@ const GET_PROJECTS = gql`
 
 function MyAppProjects() {
   const { loading, error, data } = useQuery(GET_PROJECTS);
-  console.log(data);
 
   if (error) return `Error ${error.message}`;
 
