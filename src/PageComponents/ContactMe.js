@@ -27,6 +27,8 @@ function ContactMe() {
   const [validated, setValidated] = useState(false);
   const [formData, updateFormData] = useState(initialFormData);
 
+  const [loading, setLoading] = useState(true);
+
   // eslint-disable-next-line
   const handleChange = (e) => {
     updateFormData({
@@ -38,6 +40,8 @@ function ContactMe() {
 
   // eslint-disable-next-line
   const handleSubmit = (event) => {
+    setLoading(true);
+
     event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -53,9 +57,11 @@ function ContactMe() {
       message_html: formData.message,
     });
 
-    setVisible(true);
-
-    resetForm();
+    setTimeout(() => {
+      setLoading(false);
+      setVisible(true);
+      resetForm();
+    }, "400");
   };
 
   const resetForm = () => {
@@ -69,7 +75,11 @@ function ContactMe() {
           <div className="heading">
             <h2>Get in touch with me</h2>
           </div>
-          <form validated={validated.toString()} onSubmit={handleSubmit} id="contact-form">
+          <form
+            validated={validated.toString()}
+            onSubmit={handleSubmit}
+            id="contact-form"
+          >
             <div className="mb-3">
               <label className="form-label" htmlFor="fname">
                 Name
@@ -109,15 +119,15 @@ function ContactMe() {
               ></textarea>
             </div>
             <div className="mb-3">
-              <div className="row">
-                  <button
-                    style={{ margin: 0 }}
-                    className="btn btn-primary d-block w-100"
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-              </div>
+              <button className="btn btn-primary w-100" type="submit">
+                {loading ? (
+                  <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                ) : (
+                  "Submit"
+                )}
+              </button>
             </div>
           </form>
 
