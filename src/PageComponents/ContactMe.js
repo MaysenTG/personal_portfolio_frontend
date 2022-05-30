@@ -27,7 +27,7 @@ function ContactMe() {
   const [validated, setValidated] = useState(false);
   const [formData, updateFormData] = useState(initialFormData);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // eslint-disable-next-line
   const handleChange = (e) => {
